@@ -1,0 +1,1738 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="dark">
+<!-- OGP -->
+<meta property="og:title" content="漢方占いビジネスプログラム｜KAMPO STAND">
+<meta property="og:description" content="漢方と占いを掛け合わせ「人を深く理解する力」を、あなたの仕事や活動の形にする。半年間の実践型ビジネスプログラム。モニター先着2名限定。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://kampo-uranai.github.io/business/">
+<meta property="og:image" content="https://kampo-uranai.github.io/gojiai/gojiai_OPG.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="KAMPO STAND">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="漢方占いビジネスプログラム｜KAMPO STAND">
+<meta name="twitter:description" content="漢方と占いを掛け合わせ「人を深く理解する力」を、あなたの仕事や活動の形にする。モニター先着2名限定。">
+<meta name="twitter:image" content="https://kampo-uranai.github.io/gojiai/gojiai_OPG.png">
+<meta name="theme-color" content="#18160f">
+<title>漢方占いビジネスプログラム｜KAMPO STAND</title>
+<meta name="description" content="漢方と占いを掛け合わせ「人を深く理解する力」を、あなたの仕事や活動の形にする。半年間の実践型ビジネスプログラム。モニター先着2名限定。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=Shippori+Mincho:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* =========================================================
+   漢方占いビジネスプログラム LP — ライト版
+   生成り × 濃い墨 × 青磁。金は箔のように細く。
+   雑誌特集の質感を狙い、Cormorant等のAI生成定番を排除。
+========================================================= */
+
+:root {
+  /* 背景：墨（v1ダーク） */
+  --paper:   #18160f;
+  --paper-2: #201e16;
+  --paper-3: #2a2619;
+
+  /* ボックス面：薄いアースカラー（墨地で少し浮く土色） */
+  --earth:   #2c281d;
+  --earth-2: #332e21;
+  --earth-line: rgba(210,185,120,0.30);
+
+  /* 文字：黄みを抑えた温白（ゴールドと色相を離す） */
+  --ink:   #f7f4ee;
+  --ink-2: #e8e4da;
+  --ink-3: #aaa498;
+  --ink-4: #7d776b;
+
+  /* 差し色：青磁（暗背景で映える明度に調整） */
+  --seiji:   #6fb3a8;
+  --seiji-d: #8fc9bf;
+  --seiji-deep: #2f5a52;
+  --seiji-faint: rgba(111,179,168,0.16);
+
+  /* 金：暗背景で華やかに映える（v1） */
+  --gold:   #c8a050;
+  --gold-d: #e0b44a;
+
+  /* 罫：金系ヘアライン（はっきり見える） */
+  --rule:        rgba(210,185,120,0.20);
+  --rule-strong: rgba(210,185,120,0.38);
+  --rule-gold:   rgba(210,185,120,0.50);
+
+  --ink-deep: #100e08;
+
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.35);
+  --shadow-md: 0 6px 28px rgba(0,0,0,0.50);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-feature-settings: "palt";
+  font-size: 16px;
+  line-height: 1.95;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  background: var(--paper);
+  position: relative;
+  overflow: hidden;
+}
+
+/* =========================================================
+   章番号（漢数字）＋和文小見出し ── 英eyebrow廃止
+========================================================= */
+/* 章番号：細い大きなライン数字＋左右の繊細な罫（センター） */
+.kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+.kicker-num {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  letter-spacing: 0.22em;
+  color: var(--gold);
+  padding-left: 0.22em;
+}
+.kicker-line {
+  width: 30px; height: 1px;
+  background: var(--rule-gold);
+  display: block;
+}
+.kicker-label { display: none; }
+
+.section-title {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 0.18em;
+  color: var(--gold);
+  text-align: center;
+  padding-left: 0.18em;
+  margin-top: 0;
+  line-height: 1.7;
+  position: relative;
+}
+.section-title::before {
+  content: '';
+  display: block;
+  width: 4px; height: 4px;
+  margin: 0 auto 18px;
+  background: var(--gold);
+  transform: rotate(45deg);
+  opacity: 0.8;
+  box-shadow: -16px 0 0 -1.5px var(--gold), 16px 0 0 -1.5px var(--gold);
+}
+
+.section {
+  padding: 104px 30px;
+  position: relative;
+}
+.section + .section { border-top: 1px solid var(--rule); }
+
+.section-body { margin-top: 44px; }
+
+/* 大きな文字は単語の途中で折らない＋手動改行前提 */
+.hero-title, .section-title, .takeaway, .pull, .price-main {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: normal;
+}
+.sp-br { display: none; }
+@media (max-width: 600px) { .sp-br { display: inline; } .pc-br { display: none; } }
+
+/* 本文：明朝で読ませる。行間は締め、段落間を広く */
+.section-body p {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.95;
+  color: var(--ink-2);
+  letter-spacing: 0.02em;
+  margin-bottom: 2.0em;
+  text-align: center;
+  max-width: 30em;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section-body p:last-child { margin-bottom: 0; }
+.section-body p.flow { text-align: left; }
+
+/* 章の結論：大きく振る（動）。見出しに次ぐ強度 */
+.section-body p.takeaway, .takeaway {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--ink);
+  letter-spacing: 0.04em;
+  text-align: center;
+  margin: 18px auto 46px;
+  max-width: 24em;
+  padding-bottom: 28px;
+}
+.takeaway .gold-text { color: var(--gold-d); }
+.takeaway .accent { color: var(--seiji-d); }
+.takeaway::after {
+  content: '';
+  display: block;
+  width: 36px; height: 1px;
+  background: var(--gold);
+  opacity: 0.6;
+  margin: 30px auto 0;
+}
+.takeaway .accent { color: var(--seiji-d); }
+.takeaway .gold-text { color: var(--gold-d); }
+
+/* 全幅で見せる引用（章の節目） */
+.pull {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 17px;
+  line-height: 2.0;
+  color: var(--ink);
+  text-align: center;
+  letter-spacing: 0.05em;
+  padding: 30px 24px;
+  border-top: 1px solid var(--rule-gold);
+  border-bottom: 1px solid var(--rule-gold);
+  margin: 0 auto;
+}
+
+.center { text-align: center; }
+/* センター揃えの段落は明朝。区別の主役はtakeawayに集約し、ここは控えめに */
+.section-body p.center {
+  font-family: 'Zen Old Mincho', serif;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  line-height: 2.0;
+}
+.em {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  color: var(--gold-d);
+  font-weight: 700;
+  font-size: 1.05em;
+  letter-spacing: 0.02em;
+}
+.gold-text { color: var(--gold-d); }
+.seiji-text { color: var(--seiji-d); }
+
+.mini-rule {
+  width: 26px; height: 1px;
+  background: var(--rule-gold);
+  margin: 34px auto;
+}
+
+/* =========================================================
+   HERO
+========================================================= */
+.hero {
+  padding: 92px 28px 72px;
+  text-align: center;
+  position: relative;
+}
+.hero::before {
+  content: '';
+  display: block;
+  width: 1px; height: 44px;
+  background: linear-gradient(to bottom, transparent, var(--gold));
+  margin: 0 auto 32px;
+  opacity: 0.7;
+}
+.hero-brand {
+  font-family: 'Jost', sans-serif;
+  font-size: 11.5px;
+  font-weight: 400;
+  letter-spacing: 0.46em;
+  color: var(--gold);
+  text-transform: uppercase;
+  padding-left: 0.46em;
+  margin-bottom: 36px;
+}
+.hero-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1.55;
+  color: var(--ink);
+  padding-left: 0.04em;
+  margin-bottom: 28px;
+}
+.hero-title .accent { color: var(--seiji-d); }
+.hero-sub {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 14px;
+  line-height: 1.95;
+  color: var(--ink-3);
+  letter-spacing: 0.03em;
+  margin-bottom: 36px;
+}
+.hero-program {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--gold-d);
+  padding-left: 0.16em;
+  margin-bottom: 18px;
+}
+.hero-badge {
+  display: inline-block;
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 12.5px;
+  letter-spacing: 0.14em;
+  color: var(--gold-d);
+  padding: 10px 24px 10px calc(24px + 0.14em);
+  border: 1px solid var(--rule-gold);
+  border-radius: 1px;
+  background: var(--paper);
+}
+
+/* =========================================================
+   ボタン ── ライトでは塗りと枠線で温度差
+========================================================= */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 12px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 19px 18px;
+  background: linear-gradient(135deg, #b8862e 0%, #e8c860 45%, #f4dc88 52%, #d9a93e 100%);
+  color: #2a1e08;
+  border: none;
+  border-radius: 2px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  padding-left: calc(18px + 0.06em);
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.2s, filter 0.3s;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1.5;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(200,160,80,0.3);
+}
+.btn-text { display: inline-block; }
+.btn::after {
+  content: '→';
+  flex-shrink: 0;
+  align-self: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 17px;
+  transition: transform 0.4s;
+}
+.btn:hover {
+  filter: brightness(1.08);
+  box-shadow: 0 6px 22px rgba(200,160,80,0.45);
+  transform: translateY(-2px);
+}
+.btn:hover::after { transform: translateX(5px); }
+.btn:active { transform: translateY(0); }
+
+/* 高温：青磁の塗り（差し色を主役に一点） */
+
+.btn-note {
+  font-size: 12px;
+  color: var(--ink-3);
+  text-align: center;
+  margin-top: 15px;
+  letter-spacing: 0.04em;
+}
+
+/* テキストリンク */
+.tool-box {
+  max-width: 30em;
+  margin: 4px auto 0;
+  padding: 26px 24px;
+  background: var(--earth);
+  border: 1px solid var(--earth-line);
+  border-radius: 3px;
+  text-align: center;
+}
+.intro-box {
+  max-width: 26em;
+  margin: 40px auto 28px;
+  padding: 24px 24px;
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 17px;
+  line-height: 1.85;
+  letter-spacing: 0.06em;
+  color: var(--ink);
+  text-align: center;
+  border-top: 1px solid var(--rule-gold);
+  border-bottom: 1px solid var(--rule-gold);
+}
+.tool-box-text {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 13.5px;
+  line-height: 1.9;
+  color: var(--ink-2);
+  letter-spacing: 0.02em;
+  margin-bottom: 18px;
+}
+.tool-box-link {
+  display: inline-block;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--gold-d);
+  text-decoration: none;
+  border: 1px solid var(--rule-gold);
+  border-radius: 2px;
+  padding: 11px 22px;
+  transition: background 0.3s, color 0.3s;
+}
+.tool-box-link:hover { background: var(--gold-d); color: var(--paper); }
+
+.text-link {
+  display: inline-block;
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 14.5px;
+  letter-spacing: 0.06em;
+  color: var(--seiji-d);
+  text-decoration: none;
+  border-bottom: 1px solid var(--seiji);
+  padding-bottom: 2px;
+  transition: color 0.3s, border-color 0.3s;
+}
+.text-link:hover { color: var(--gold-d); border-color: var(--gold); }
+
+/* =========================================================
+   実績バー（横並び数字・罫線で見せる）
+========================================================= */
+.proof {
+  display: flex;
+  justify-content: center;
+  max-width: 460px;
+  margin: 0 auto;
+  border-top: 1px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule-strong);
+}
+.proof-item {
+  flex: 1;
+  text-align: center;
+  padding: 22px 8px;
+  position: relative;
+}
+.proof-item + .proof-item::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 24px; bottom: 24px;
+  width: 1px;
+  background: var(--rule);
+}
+.proof-num {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 600;
+  font-size: 30px;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.proof-num .unit {
+  font-size: 13px;
+  color: var(--ink-2);
+  margin-left: 2px;
+  font-weight: 400;
+}
+.proof-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--ink-3);
+  margin-top: 6px;
+  line-height: 1.5;
+}
+
+/* =========================================================
+   チェックリスト（青磁のチェック印）
+========================================================= */
+.checklist {
+  list-style: none;
+  max-width: 520px;
+  margin: 0 auto;
+}
+.checklist li {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: var(--ink-2);
+  padding: 16px 18px 16px 46px;
+  background: var(--earth);
+  border: 1px solid var(--earth-line);
+  border-radius: 3px;
+  margin-bottom: 10px;
+  position: relative;
+  word-break: normal;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+.checklist li::before {
+  content: '';
+  position: absolute;
+  left: 16px; top: 16px;
+  width: 18px; height: 18px;
+  border: 1px solid var(--gold);
+  border-radius: 3px;
+  background: rgba(200,160,80,0.10);
+}
+.checklist li::after {
+  content: '✓';
+  position: absolute;
+  left: 19px; top: 13px;
+  font-size: 13px;
+  color: var(--gold-d);
+}
+.checklist li:first-child { border-top: 1px solid var(--rule); }
+
+/* =========================================================
+   before / after
+========================================================= */
+.contrast {
+  margin: 8px 0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.contrast-row { padding: 26px 24px; text-align: center; }
+.contrast-row.before {
+  background: var(--earth);
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px 3px 0 0;
+}
+.contrast-row.after {
+  background: var(--seiji-deep);
+}
+.contrast-label {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 12.5px;
+  letter-spacing: 0.12em;
+  margin-bottom: 10px;
+}
+.contrast-row.before .contrast-label { color: var(--ink-4); }
+.contrast-row.after .contrast-label { color: var(--gold-d); }
+.contrast-row p {
+  font-size: 14.5px !important;
+  line-height: 1.85 !important;
+  margin: 0 !important;
+}
+.contrast-row.before p { color: var(--ink-2) !important; }
+.contrast-row.after p { color: #f2ede0 !important; font-weight: 500 !important; }
+.contrast-arrow {
+  text-align: center;
+  color: var(--seiji-d);
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  padding: 8px 0;
+  background: var(--earth);
+}
+
+/* =========================================================
+   画像プレースホルダー
+========================================================= */
+.img-ph {
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 220px;
+  margin: 30px 0;
+  padding: 24px;
+  gap: 6px;
+}
+.img-ph .ph-en {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  color: var(--seiji-d);
+}
+.img-ph .ph-note { font-size: 11.5px; letter-spacing: 0.05em; color: var(--ink-3); }
+.img-ph.portrait { min-height: 320px; }
+
+/* =========================================================
+   3要素（縦罫の編集レイアウト・カードを脱する）
+========================================================= */
+.pillars { margin-top: 8px; display: grid; gap: 14px; }
+.pillar {
+  padding: 30px 24px;
+  text-align: center;
+  background: var(--earth);
+  border: 1px solid var(--earth-line);
+  border-radius: 3px;
+}
+.pillar-num { display: none; }
+.pillar-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--gold-d);
+  margin-bottom: 12px;
+  padding-bottom: 14px;
+}
+.pillar-title::after {
+  content: '';
+  display: block;
+  width: 24px; height: 1px;
+  background: var(--gold);
+  opacity: 0.6;
+  margin: 14px auto 0;
+}
+.pillar p { font-family: 'Zen Kaku Gothic New', sans-serif !important; font-size: 14px !important; font-weight: 500 !important; line-height: 1.85 !important; color: var(--ink-2) !important; margin: 0 auto !important; max-width: 22em; text-align: center !important; }
+
+/* =========================================================
+   2コース
+========================================================= */
+/* 既存講座：控えめなアース面 */
+.path {
+  padding: 26px 24px;
+  margin-bottom: 14px;
+  border: 1px solid var(--earth-line);
+  border-radius: 3px;
+  background: var(--earth);
+}
+.path-label {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+}
+.path-name {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 17px;
+  letter-spacing: 0.06em;
+  color: var(--ink-2);
+  margin-bottom: 13px;
+}
+.path p { font-size: 14px !important; line-height: 1.95 !important; color: var(--ink-3) !important; margin: 0 !important; }
+
+/* 新プログラム：枠と面で自然に重心を置く（露骨な優劣にしない） */
+.path-main {
+  padding: 28px 24px;
+  margin-bottom: 14px;
+  border: 1px solid var(--rule-gold);
+  border-radius: 3px;
+  background: linear-gradient(160deg, #243f3a 0%, #1e3531 100%);
+  position: relative;
+}
+.path-main .path-label {
+  color: var(--seiji-d);
+  font-weight: 500;
+}
+.path-main .path-name {
+  color: var(--ink);
+  font-size: 17px;
+}
+.path-main p { font-size: 14px !important; line-height: 1.95 !important; color: var(--ink-2) !important; margin: 0 !important; }
+
+/* =========================================================
+   工程（縦タイムライン・金の点）
+========================================================= */
+.phase {
+  margin-bottom: 14px;
+  border-left: 1px solid var(--rule-strong);
+  padding: 4px 0 14px 24px;
+  position: relative;
+}
+.phase::before {
+  content: '';
+  position: absolute;
+  left: -4px; top: 14px;
+  width: 7px; height: 7px;
+  background: var(--gold);
+  border-radius: 50%;
+}
+.phase-period {
+  font-family: 'Shippori Mincho', serif;
+  font-size: 12.5px;
+  letter-spacing: 0.1em;
+  color: var(--seiji-d);
+  margin-bottom: 4px;
+}
+.phase-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 17px;
+  letter-spacing: 0.05em;
+  color: var(--gold-d);
+  margin: 6px 0 13px;
+}
+.phase p { font-size: 14px !important; line-height: 1.95 !important; color: var(--ink-2) !important; margin-bottom: 1.1em !important; }
+.phase p:last-child { margin-bottom: 0 !important; }
+.phase .note { font-size: 12.5px !important; color: var(--ink-3) !important; }
+
+/* =========================================================
+   事例（罫線で区切る・カード脱却）
+========================================================= */
+.case {
+  padding: 24px 22px;
+  margin-bottom: 12px;
+  background: var(--earth);
+  border: 1px solid var(--earth-line);
+  border-radius: 3px;
+}
+.case-tag {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 14.5px;
+  letter-spacing: 0.04em;
+  color: var(--gold-d);
+  margin-bottom: 12px;
+  padding-left: 16px;
+  position: relative;
+}
+.case-tag::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 11px;
+  width: 7px; height: 1px;
+  background: var(--seiji);
+}
+.case p { font-size: 14px !important; line-height: 1.95 !important; color: var(--ink-2) !important; margin: 0 !important; }
+
+/* =========================================================
+   手に入るもの（価値積み上げ）
+========================================================= */
+.value-list { list-style: none; max-width: 520px; margin: 0 auto; }
+.value-list li {
+  padding: 16px 0;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.value-list li:first-child { border-top: 1px solid var(--rule); }
+.value-name {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  color: var(--ink);
+  position: relative;
+  padding-left: 20px;
+}
+.value-name::before {
+  content: '';
+  position: absolute; left: 0; top: 13px;
+  width: 9px; height: 1px;
+  background: var(--gold);
+}
+.value-meaning { font-size: 12.5px; line-height: 1.7; color: var(--ink-3); padding-left: 20px; }
+
+/* =========================================================
+   手に入るものカード（訴求最大化）
+========================================================= */
+.value-cards {
+  display: grid;
+  gap: 16px;
+  max-width: 36em;
+  margin: 0 auto;
+}
+.value-card {
+  background: var(--earth);
+  border: 1px solid var(--earth-line);
+  border-radius: 3px;
+  padding: 26px 24px 22px;
+  position: relative;
+}
+.value-card-num {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+.value-card-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--gold-d);
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+.value-card-body {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.85;
+  color: var(--ink-2);
+  margin-bottom: 10px;
+}
+.value-card-why {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 12.5px;
+  line-height: 1.8;
+  color: var(--ink-3);
+  border-top: 1px solid var(--rule);
+  padding-top: 10px;
+  margin-top: 2px;
+}
+
+/* =========================================================
+   価格（角飾りはここだけ＝ここぞ）
+========================================================= */
+.price-card {
+  background: var(--paper);
+  border: 1px solid var(--rule-gold);
+  border-radius: 2px;
+  padding: 44px 30px;
+  text-align: center;
+  position: relative;
+  box-shadow: var(--shadow-md);
+}
+.price-card::before, .price-card::after {
+  content: '';
+  position: absolute;
+  width: 18px; height: 18px;
+  border-color: var(--gold);
+  border-style: solid;
+}
+.price-card::before { top: -1px; left: -1px; border-width: 1.5px 0 0 1.5px; }
+.price-card::after  { bottom: -1px; right: -1px; border-width: 0 1.5px 1.5px 0; }
+.price-name {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 17px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  margin-bottom: 24px;
+}
+.price-regular {
+  font-family: 'Jost', sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+}
+.price-regular s { text-decoration-color: var(--gold); }
+.price-arrow { color: var(--seiji); font-size: 16px; margin: 6px 0; }
+.price-limited {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--seiji-d);
+  margin: 18px 0;
+}
+.price-main {
+  font-family: 'Shippori Mincho', serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-bottom: 4px;
+}
+.price-main .num { font-size: 46px; }
+.price-main .yen { font-size: 20px; }
+.price-tax { font-size: 12px; color: var(--ink-3); letter-spacing: 0.06em; }
+.price-includes {
+  font-size: 13.5px;
+  color: var(--ink-2);
+  line-height: 1.9;
+  border-top: 1px solid var(--rule);
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.price-pay { font-size: 12.5px; color: var(--ink-3); line-height: 1.95; margin-top: 16px; }
+
+/* =========================================================
+   フッター
+========================================================= */
+/* =========================================================
+   AI三段論法ステップ図
+========================================================= */
+.ai-steps {
+  max-width: 32em;
+  margin: 0 auto;
+}
+.ai-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px 22px;
+  background: var(--earth);
+  border: 1px solid var(--earth-line);
+  border-radius: 3px;
+  margin-bottom: 0;
+}
+.ai-step-num {
+  font-family: 'Jost', sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  color: var(--gold);
+  opacity: 0.8;
+  flex-shrink: 0;
+  line-height: 1.4;
+  min-width: 28px;
+}
+.ai-step-text {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--ink-2);
+}
+.ai-step-text strong {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 700;
+  color: var(--gold-d);
+  display: block;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+.ai-step-arrow {
+  text-align: center;
+  color: var(--gold);
+  font-size: 18px;
+  opacity: 0.6;
+  padding: 4px 0;
+}
+
+/* =========================================================
+   参加条件ボックス
+========================================================= */
+.condition-box {
+  max-width: 32em;
+  margin: 0 auto;
+  padding: 30px 26px;
+  border: 1px solid var(--rule-gold);
+  border-radius: 3px;
+  background: var(--earth);
+}
+.condition-box-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gold-d);
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+  text-align: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--rule-gold);
+}
+.condition-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+.condition-list li {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--ink-2);
+  padding: 10px 0 10px 28px;
+  position: relative;
+  border-bottom: 1px solid var(--rule);
+}
+.condition-list li:last-child { border-bottom: none; }
+.condition-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0; top: 11px;
+  font-size: 13px;
+  color: var(--seiji-d);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 700;
+}
+.condition-note {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--ink-3);
+  background: var(--earth-2);
+  border-left: 2px solid var(--seiji);
+  padding: 14px 16px;
+  border-radius: 0 2px 2px 0;
+}
+
+/* =========================================================
+   LINEステップ図
+========================================================= */
+.line-steps {
+  max-width: 32em;
+  margin: 0 auto;
+}
+.line-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 20px 0;
+  position: relative;
+}
+.line-step + .line-step {
+  border-top: 1px solid var(--rule);
+}
+.line-step-badge {
+  flex-shrink: 0;
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: var(--seiji-deep);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Jost', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  color: #f4ede2;
+  letter-spacing: 0.04em;
+}
+.line-step-body {}
+.line-step-label {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--seiji-d);
+  margin-bottom: 5px;
+}
+.line-step-text {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 14.5px;
+  line-height: 1.85;
+  color: var(--ink-2);
+}
+.line-step-text strong {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+}
+.line-registered {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 13px;
+  line-height: 1.85;
+  color: var(--ink-3);
+  text-align: center;
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--rule);
+}
+
+/* =========================================================
+   事例カード強化（Before/After付き）
+========================================================= */
+.case-ba {
+  margin-top: 14px;
+}
+.case-ba .contrast-row p {
+  font-family: 'Zen Old Mincho', serif !important;
+}
+
+/* =========================================================
+   2名限定・納得感ボックス
+========================================================= */
+.limit-box {
+  max-width: 32em;
+  margin: 0 auto;
+  padding: 26px 24px;
+  background: var(--earth);
+  border: 1px solid var(--rule-gold);
+  border-radius: 3px;
+}
+.limit-box-title {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 15px;
+  color: var(--gold-d);
+  letter-spacing: 0.06em;
+  margin-bottom: 14px;
+  text-align: center;
+}
+.limit-box p {
+  font-family: 'Zen Old Mincho', serif !important;
+  font-size: 13.5px !important;
+  line-height: 1.9 !important;
+  color: var(--ink-2) !important;
+  text-align: left !important;
+  margin-bottom: 12px !important;
+}
+.limit-box p:last-child { margin-bottom: 0 !important; }
+
+/* =========================================================
+   他講座との違い比較図
+========================================================= */
+.gap-compare {
+  max-width: 32em;
+  margin: 0 auto;
+}
+.gap-col {
+  border-radius: 3px;
+  padding: 22px 22px;
+}
+.gap-col--other {
+  background: var(--earth);
+  border: 1px solid var(--earth-line);
+}
+.gap-label {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--ink-3);
+  margin-bottom: 14px;
+}
+.gap-list {
+  list-style: none;
+}
+.gap-list li {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink-2);
+  padding: 8px 0 8px 20px;
+  border-bottom: 1px solid var(--rule);
+  position: relative;
+}
+.gap-list li:last-child { border-bottom: none; }
+.gap-list li::before {
+  content: '·';
+  position: absolute; left: 4px;
+  color: var(--ink-3);
+  font-size: 18px;
+}
+.gap-arrow {
+  text-align: center;
+  font-family: 'Jost', sans-serif;
+  font-size: 20px;
+  color: var(--gold);
+  opacity: 0.6;
+  padding: 10px 0;
+}
+.gap-question {
+  background: var(--earth-2);
+  border: 1px solid var(--rule-gold);
+  border-radius: 3px;
+  padding: 20px 22px;
+}
+.gap-question p {
+  font-family: 'Zen Kaku Gothic New', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  color: var(--gold-d) !important;
+  margin-bottom: 12px !important;
+  text-align: left !important;
+}
+.gap-question ul {
+  list-style: none;
+}
+.gap-question ul li {
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink-2);
+  padding: 6px 0 6px 18px;
+  position: relative;
+}
+.gap-question ul li::before {
+  content: '?';
+  position: absolute; left: 0;
+  color: var(--gold);
+  opacity: 0.7;
+  font-family: 'Jost', sans-serif;
+  font-size: 13px;
+}
+.gap-result {
+  background: linear-gradient(135deg, #2a2018 0%, #1e1c12 100%);
+  border: 1px solid var(--rule-gold);
+  border-radius: 3px;
+  padding: 20px 22px;
+  font-family: 'Zen Old Mincho', serif;
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--ink-2);
+  text-align: center;
+}
+.gap-result span {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--gold-d);
+  display: block;
+  margin-top: 6px;
+}
+
+.footer {
+  padding: 54px 30px 60px;
+  text-align: center;
+  border-top: 1px solid var(--rule);
+  background: var(--paper-2);
+}
+.footer-brand {
+  font-family: 'Jost', sans-serif;
+  font-size: 12px;
+  letter-spacing: 0.45em;
+  color: var(--gold);
+  text-transform: uppercase;
+  padding-left: 0.45em;
+  margin-bottom: 16px;
+}
+.footer-copy { font-size: 11px; color: var(--ink-3); letter-spacing: 0.05em; line-height: 1.9; }
+.disclaimer {
+  font-size: 10.5px;
+  color: var(--ink-4);
+  line-height: 1.85;
+  margin-top: 16px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 480px) {
+  .section { padding: 68px 22px; }
+  .hero { padding: 76px 22px 60px; }
+  .hero-title { font-size: 31px; letter-spacing: 0.02em; }
+  .section-title { font-size: 17px; }
+  .takeaway { font-size: 19px; }
+  .price-card { padding-left: 22px; padding-right: 22px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.85s ease, transform 0.85s ease;
+}
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="hero-brand">KAMPO STAND</div>
+    <h1 class="hero-title">学んできたことを、<br>仕事にする。</h1>
+    <p class="hero-sub">漢方と占いを掛け合わせ、<br class="sp-br">「人を深く理解する力」を、<br>あなたの仕事や活動の形にしていく。<br>半年間の実践型ビジネスプログラムです。</p>
+    <div class="hero-program">漢方占い講座　新開業プログラム</div>
+    <div class="hero-badge">モニター募集 ｜ 先着2名</div>
+  </header>
+
+  <!-- ===================== 悩み（チェックリスト） ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">こんな状態で、<br>止まっていませんか</h2>
+    <div class="section-body">
+      <ul class="checklist">
+        <li>漢方・薬膳・占いを学び、資格も取った。でも、それを仕事として形にする道すじが、どこにも見えない</li>
+        <li>カウンセリングやコーチングを学んできたが、「自分のメニュー」として何を売ればいいか分からない</li>
+        <li>サロン・施術・講師業はあるが、お客さまをもっと深く理解したいのに、感覚に頼るしかない</li>
+        <li>「あなたに相談してよかった」と、名前で選ばれる存在になりたい</li>
+        <li>学んだことを、ちゃんと収入につながる、自分だけのサービスとして組み立てたい</li>
+      </ul>
+      <div class="section-body">
+        <p class="takeaway" style="margin-top:8px;">止まっているのは、<br>あなたのせいではありません。</p>
+        <p class="flow">学んだことは、ちゃんと身についています。足りないのは知識でもセンスでもなくて、その学びを「人の役に立つ形」に変える道すじが、どこにも用意されていなかった。ただ、それだけのことだと思っています。</p>
+        <div class="gap-compare" style="margin:28px 0;">
+          <div class="gap-col gap-col--other">
+            <div class="gap-label">一般的な講座</div>
+            <ul class="gap-list">
+              <li>知識・理論を教える</li>
+              <li>資格・修了証を出す</li>
+              <li>テンプレートを渡す</li>
+              <li>AIや発信のやり方を教える</li>
+            </ul>
+          </div>
+          <div class="gap-arrow">↓</div>
+          <div class="gap-question">
+            <p>でも、その先は？</p>
+            <ul>
+              <li>その知識を、どう人に届ける？</li>
+              <li>学んだことを、どう仕事にする？</li>
+              <li>形にしてから、どう続ける？</li>
+            </ul>
+          </div>
+          <div class="gap-arrow">↓</div>
+          <div class="gap-result">
+            だから、<span>学んだ人ほど止まる。</span>
+          </div>
+        </div>
+        <p class="flow">これは能力の問題でも、センスの問題でもありません。「学び」と「仕事」の間にある具体的な道すじが、どこにも用意されていないのです。このプログラムは、その間を埋めることだけを考えて設計しました。</p>
+      <p class="flow">「もっと勉強しなければ」「まだ自信がない」「いつか形にしたい」。そう思いながら、時間だけが過ぎていく。本当に必要なのは、さらに知識を足すことではなく、今ある知識を<span class="em">“使える形”</span>に変えることなのかもしれません。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== はじめに（時代背景＋ツール導線） ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">なぜ今、この募集を<br>するのか</h2>
+    <div class="section-body">
+      <p class="takeaway">漢方占いと、ツールと、あなたの経験を組み合わせる。<br><span class="gold-text">その掛け算で、今の時代に響く仕事が生まれる。</span></p>
+      <p class="flow">実は、この募集は予定していませんでした。私は現在、漢方占いの既存講座を45名の方にお伝えしています。けれど最近、一般の方向けに「ご自愛漢方占い」鑑定ツールをリリースしたところ、<span class="em">想像以上の反響</span>がありました。</p>
+
+      <div class="tool-box">
+        <p class="tool-box-text">「ご自愛漢方占い」は、生年月日からその人の体質と性質を読み取り、相性のいい養生を提案する一般向けのツールです。どなたでも無料でお試しいただけます。</p>
+        <a class="tool-box-link" href="https://kampo-uranai.github.io/gojiai/index.html" target="_blank" rel="noopener">ご自愛漢方占いを試してみる →</a>
+      </div>
+
+      <p class="flow" style="margin-top:28px;">ツールを使ってくださった方から、こんな声が届くようになりました。「これを自分の仕事に使えますか」「お客さまの体質を読み取るのに、こういうツールが欲しかった」「やっと形にできそうです」。</p>
+      <p class="flow">そこで気づいたのです。<span class="em">受講生が使っている、より詳しく体質と心理を読み解ける専用ツールと、AIを組み合わせれば、今ある知識を効率よく実践に変えられる。</span>その仕組みを作れば、たくさんの人が、自分の得意を仕事にする近道が開ける、と。</p>
+
+      <div class="ai-steps">
+        <div class="ai-step">
+          <div class="ai-step-num">1</div>
+          <div class="ai-step-text"><strong>漢方占いのメソッドで「人を読む」</strong>体質と性質の両面から、目の前の人を立体的に理解する。この読み取りが、すべての起点。</div>
+        </div>
+        <div class="ai-step-arrow">↓</div>
+        <div class="ai-step">
+          <div class="ai-step-num">2</div>
+          <div class="ai-step-text"><strong>受講生専用ツール×AIで、読み取りを「効率化・見える化」する</strong>より詳細な専用ツールが鑑定結果を整理し、AIと組み合わせることで、提案・発信・資料づくりまでをスピーディに動かせる。</div>
+        </div>
+        <div class="ai-step-arrow">↓</div>
+        <div class="ai-step">
+          <div class="ai-step-num">3</div>
+          <div class="ai-step-text"><strong>あなたの知識・経験と掛け合わせて「仕事にする」</strong>サロン、マルシェ、オンライン講座、カウンセリング、企業研修……今ある仕事に足しても、ゼロから始めても。あなたに合った形で、最短でリリースする。</div>
+        </div>
+      </div>
+
+      <p class="flow" style="margin-top:28px;">「人を深く理解する力」に、ツールとAIの効率を掛け合わせる。知識があるのに形にできなかったのは、この組み合わせが手元になかっただけかもしれません。だから私は、そのすべてを一つのプログラムとしてまとめることにしました。今回はモニターとして先着2名限定での募集です。モニターとして参加いただくことで、価格を抑えてお渡しする代わりに、プログラムの内容や使い勝手についてのフィードバックをいただきます。</p>
+    </div>
+  </section>
+
+  <!-- ===================== なぜ掛け合わせるのか ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">なぜ、漢方と占いを<br>掛け合わせるのか</h2>
+    <div class="section-body">
+      <p class="takeaway">変わらない性質と、今変えられる体質。<br><span class="gold-text">その両方を読んで、はじめて整え方が見えてくる。</span></p>
+      <p class="flow">漢方だけでは、今の体質は分かります。気血水や五臓のバランス、どんな不調が起きやすく、どう整えればいいのか。でも、その人がなぜ頑張りすぎるのか、なぜ同じことで悩み続けるのか。生まれ持った性質までは読みきれません。<br><br>逆に占いだけでは、生まれ持った性格は見えても、今その体に何が起きているかは分かりません。</p>
+      <p class="flow">人は、生まれ持った性質だけでも、今の体の状態だけでも生きていません。変わらない部分と、今変えられる部分。その両方が重なって、今のその人がいる。だから私は、漢方と占いを掛け合わせました。それが、<span class="gold-text">22年の漢方の現場を経て辿り着いた「漢方占い」</span>です。</p>
+      <p class="flow">ここでいう「占い」は、運勢を当てるものではありません。生年月日から、その人の性質や傾向を読み取る<span class="em">「人を理解するためのものさし」</span>です。漢方の体質論と重ねることで、理由を持って説明できる。占いに馴染みのない方にも、納得して使っていただけます。</p>
+    </div>
+  </section>
+
+  <!-- ===================== こうなれたら（before/after対比） ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">こうなれたら</h2>
+    <div class="section-body">
+      <div class="contrast">
+        <div class="contrast-row before">
+          <div class="contrast-label">Before</div>
+          <p class="flow">「これが合いそう」と感覚で提案する。なぜ合うのかは、うまく言葉にできない。</p>
+        </div>
+        <div class="contrast-arrow">↓</div>
+        <div class="contrast-row after">
+          <div class="contrast-label">After</div>
+          <p class="flow">「あなたはこういう傾向だから、これが合いやすい」と、根拠を持って伝えられる。</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <p class="flow">目の前の人の体質も、性格のくせも、今の調子も、無理をしやすいポイントも読み取れる。お茶を選ぶときも、食材をすすめるときも、メニューを提案するときも、迷わない。<span class="em">「あなたにお願いしたい」</span>と、名前で選ばれるようになる。</p>
+        <p class="flow">サロンやお店では、お客さまの心まで掴める。カウンセリングや講座では「この人は分かってくれる」と信頼される。SNSでは「私のことを言われているみたい」と読まれる発信ができる。<br><br>特別な才能は必要ありません。<span class="em">必要なのは、人を読み取るための型と、それを仕事に変えるための実践です。</span></p>
+      <div style="height:32px;"></div>
+      </div>
+      <a class="btn" href="https://lin.ee/ux3HSzn" target="_blank" rel="noopener"><span class="btn-text">まず特別資料を受け取る（無料）</span></a>
+    </div>
+  </section>
+
+  <!-- ===================== 漢方占いとは ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">漢方占いとは</h2>
+    <div class="section-body">
+      <p class="takeaway">「当たる占い」でも「知識だけの漢方」でもない。<br><span class="gold-text">理由を持って、人に寄り添うための方法です。</span></p>
+      <p class="flow">漢方占いとは、生まれ持った体質を読み取る「漢方」と、その人の性質や傾向を読み取る「占い」を掛け合わせて、人を深く、立体的に理解する方法です。これまで感覚でしかつかめなかったことが、少しずつ言葉になり、見えてくる。なぜこの人は疲れやすいのか。なぜ頑張りすぎるのか。なぜこの人には、この言葉が届くのか。</p>
+      <!-- 画像プレースホルダー：鑑定ツールのスクショ -->
+      <div class="img-ph">
+        <span class="ph-en">鑑定ツール</span>
+        <span class="ph-note">鑑定ツールの画面スクショをここに</span>
+      </div>
+      <p class="flow">その背景を、漢方の体質論と、占いの性質の読み取りから見ていきます。私がお伝えしたいのは、誰もが自分に本当に合ったケアを、自分で選べるようになる世界です。その視点を持つ人が増えるほど、人を支えられる場所が広がっていく。お店でも、サロンでも、講座でも、家庭でも、職場でも。その担い手となる方を、モニターとしてお迎えします。</p>
+    </div>
+  </section>
+
+  <!-- ===================== 必要な3つ ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">学びを仕事に変える、<br>3つの条件</h2>
+    <div class="section-body">
+      <p class="takeaway">この3つが揃って、はじめて学びは仕事になる。</p>
+      <div class="pillars">
+        <div class="pillar">
+          <div class="pillar-num">01</div>
+          <div class="pillar-title">相手の心と体をよむ力</div>
+          <p class="flow">体質と性質の両面から、目の前の人を思い込みじゃなく理解できるようになる。</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">02</div>
+          <div class="pillar-title">使えるシステムやツール</div>
+          <p class="flow">鑑定ツールとAIが、あなたの読み取りをそばで支えてくれる。</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-num">03</div>
+          <div class="pillar-title">いつでも聞けるサポート</div>
+          <p class="flow">動き出してから迷っても、ひとりにならずに相談できる。</p>
+        </div>
+      </div>
+      <div class="section-body">
+        <p class="flow">学んだ人が前に進めない理由の多くは、能力の問題ではありません。「学び」と「仕事」の間にあるものが、抜け落ちているだけです。</p>
+        <p class="flow">だからこのプログラムでは、<span class="em">読み取りの型・鑑定ツール・AI活用・仕入れルート・メニュー設計・価格設定・発信・集客・デザインサポート・実践後のフォロー</span>まで、その間を埋めるものを全部用意しました。本来かかる時間を、「人を理解すること」と「あなたらしい形を作ること」に使ってほしいと思っています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 大切にしてること＋2コース ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">いちばん大切に<br>していること</h2>
+    <div class="section-body">
+      <p class="takeaway">知識を増やすことではなく、<br><span class="gold-text">学んだその日から、現場で使える状態にすること。</span></p>
+      <p class="flow">私がいちばん大切にしているのは、ツールを使いこなすこと、AIを活用すること、そして何より漢方占いを、あなたの実践の中で動かせるようになることです。お客さまの前でどう話すか。SNSでどう伝えるか。メニューとしてどう見せるか。価格をどう決めるか。知識があって、ツールがあって、そしてそれを実際に届ける形がある。この三つが揃って、はじめて仕事になります。</p>
+      <div class="intro-box">私は今、漢方占いを学べる場を<br>2つの形でご用意しています。</div>
+      <div class="path">
+        <div class="path-label">深く学ぶ</div>
+        <div class="path-name">これまで続けてきた講座</div>
+        <p class="flow">陰陽五行や気血水といった理論を基礎からじっくり学び、漢方と占いの両方を、自分の頭で読み解けるようになることを目指します。なぜその体質になるのか、なぜその性質が出るのか。仕組みを理解して、自分の言葉で説明できるようになる。深く学びたい方のための道です。</p>
+      </div>
+      <div class="path path-main">
+        <div class="path-label">形にする</div>
+        <div class="path-name">この実践型ビジネスプログラム</div>
+        <p class="flow">すでに持っている知識と経験を土台に、鑑定ツールとAIを活用しながら「使える形」に変えていきます。学んだことを、どう人に届け、どう仕事として形にするか。その環境と仕組みごと、一緒に作っていくことに重心を置いています。</p>
+      </div>
+      <div class="section-body">
+        <p class="flow">深く学ぶ道と、実践しながら形にしていく道。上下ではなく、入り口と進み方が違うだけです。どちらを選んでも、目指す先は同じ。<span class="em">「人を深く理解し、その人に合う形で関われるようになること」</span>です。理論を学んできた方には、その知識を現場で動かす力が加わります。これから始める方には、ツールという確かな足場ができます。</p>
+        <p class="flow">鑑定ツールは、私自身が現場での読み取りを重ねながら、一つひとつ形にしてきたものです。その読み取りの考え方から、これからのAIの活かし方まで、一緒に見ていきましょう。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 講師 ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">講師について</h2>
+    <div class="section-body">
+      <!-- 画像プレースホルダー：講師写真 -->
+      <div class="img-ph portrait">
+        <span class="ph-en">講師</span>
+        <span class="ph-note">講師写真をここに</span>
+      </div>
+      <p class="flow">おちゃぱんと申します。漢方と出会ったのは22年前、自分が体調を崩した24歳のときのことです。それ以前からデザインの仕事をしており、今もツールやロゴ、商品のパッケージや世界観づくりを手がけているのは、その経験があるからです。</p>
+      <p class="flow">漢方と出会ってからは、ドラッグストアで10年、店長として毎日たくさんの方の不調に向き合いました。登録販売者として、市販薬や漢方薬の相談を受け、その人に合うものを選ぶ現場に立ち続けてきました。カウンセリングや整体の経験も積み、やがて自分の漢方茶専門店「漢方スタンド」をオープン。今はオンラインでの販売やカウンセリングも続けています。</p>
+      <!-- 画像プレースホルダー：お店/漢方茶 -->
+      <div class="img-ph">
+        <span class="ph-en">漢方スタンド</span>
+        <span class="ph-note">お店・漢方茶の写真をここに</span>
+      </div>
+      <p class="flow">漢方占いが生まれたのは、コロナでお店を閉めることになったことがきっかけでした。答えを探すように占いの本を読みあさるうちに、漢方と占いの間にあるつながりに気づいたんです。お店を失ったことが、<span class="em">漢方占いが生まれるきっかけになりました。</span></p>
+      <p class="flow">私は、机の上で学んだことだけを教える講師ではありません。<span class="em">22年間、お客さまを目の前にして、売り、選び、施術し、相談を受け、お店を経営してきました。</span>うまくいったことも、たくさん失敗したこともあります。</p>
+
+      <div class="condition-box" style="margin-top:28px;">
+        <div class="condition-box-title">このプログラムを届けられる、3つの理由</div>
+        <ul class="condition-list">
+          <li><strong style="color:var(--gold-d);font-family:'Zen Kaku Gothic New',sans-serif;">漢方占いの開発者として</strong><br>22年の漢方の現場を経て確立した独自メソッドを、自らシステム（鑑定ツール・AI）として構築しました。使う側ではなく、作った側として、どう現場で動かすかを知っています。</li>
+          <li><strong style="color:var(--gold-d);font-family:'Zen Kaku Gothic New',sans-serif;">デザイナーとして</strong><br>ロゴ、パッケージ、メニュー表、SNSの世界観づくりまで、受講生の「見せ方」を一緒に設計できます。仕組みと意匠の両面からプロデュースできる伴走者は、そう多くはありません。</li>
+          <li><strong style="color:var(--gold-d);font-family:'Zen Kaku Gothic New',sans-serif;">現場22年の実践者として</strong><br>教科書の知識ではなく、ドラッグストア・漢方サロン・オンライン事業という現場で積み上げた実践知をそのままお渡しします。</li>
+        </ul>
+      </div>
+
+      <p class="flow" style="margin-top:28px;">今回のプログラムでは、その現場で積み上げてきたものを、あなたが実践できる形にしてお渡しします。</p>
+    </div>
+  </section>
+
+  <!-- ===================== 中身 ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">半年プログラムの中身</h2>
+    <div class="section-body">
+      <p class="takeaway">前半で「使える形」に。<br>後半で「あなたの仕事」に。</p>
+      <div class="phase">
+        <div class="phase-period">前半 三ヶ月</div>
+        <div class="phase-title">漢方占いを、現場で使える形に</div>
+        <p class="flow">人を読み取る軸を身につけます。漢方では五臓・気血水・実虚・季節の影響を、目の前の人にどう使うか。占いでは生年月日から性格・行動パターン・無理をしやすいところ・言葉の届き方を読み取ります。</p>
+        <p class="flow">その2つを掛け合わせて、「この人にはどう伝えるとよいか」「どんな整え方が合いやすいか」「どんな提案が自然か」を考えられるようにしていきます。鑑定ツールも、ただ結果を読むだけでなく、どう説明し、どう届け、どう仕事に活かすかまで扱います。</p>
+        <p class="note">※漢方・薬膳・占いのいずれかを学んだご経験のある方を対象とした、凝縮した内容です。</p>
+      </div>
+      <div class="phase">
+        <div class="phase-period">後半 三ヶ月</div>
+        <div class="phase-title">あなたのかたちを、実際につくる</div>
+        <p class="flow">ここからは、あなた自身の仕事や活動に落とし込みます。開業は必須ではありません。今の仕事に取り入れたい方も、自分の店を持ちたい方も、マルシェやオンライン鑑定から始めたい方も、研修や人材育成に活かしたい方も。ミニ鑑定、体質別の漢方茶提案、薬膳お茶会、サロンメニュー、講座、企業研修、既存サービスへの追加メニュー。同じ形を目指す必要はありません。あなたに合う形を一緒に探して、育てていく時間です。</p>
+      </div>
+      <div class="phase">
+        <div class="phase-period">＋ 一年間のフォロー</div>
+        <div class="phase-title">そして、1年間のフォロー</div>
+        <p class="flow">本当に悩むのは、動き出してからです。このメニューでいいのか。価格はこれでいいのか。発信が止まってしまった。だから半年間の実践に加えて、その後1年間のフォローをつけています。学んで終わりではなく、形にして、動かして、育てていく。そこまでを一緒に見ていきます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 事例 ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">学んだ方は、<br>こう活かしています</h2>
+    <div class="section-body">
+      <p class="takeaway">同じ「漢方占い」を、それぞれの形で。<br><span class="gold-text">唯一無二の仕事が生まれていく。</span></p>
+
+      <div class="case">
+        <div class="case-tag">子育てをしながら、月1〜2回マルシェに立つ方</div>
+        <div class="case-ba">
+          <div class="contrast">
+            <div class="contrast-row before">
+              <div class="contrast-label">Before</div>
+              <p class="flow">薬膳茶は自分で作れる。でも「何を売ればいいか」が分からない。価格のつけ方も、なぜこのお茶を選んだかの言葉も、うまく出てこない。「勉強はしたのに、商品として形にならない」という感覚が続いていた。</p>
+            </div>
+            <div class="contrast-arrow">↓</div>
+            <div class="contrast-row after">
+              <div class="contrast-label">After</div>
+              <p class="flow">生年月日から体質と性質を読み取り、「あなたへの処方茶」として一人ひとりに提案できるように。「なぜこれがあなたに合うのか」を根拠を持って伝えられるようになってから、会話が変わった。お客さまが「また来たかった」と言ってくれるようになり、固定のリピーターが生まれた。</p>
+            </div>
+          </div>
+        </div>
+        <p class="flow" style="margin-top:16px;">この方が「他の講座と違う」と言っていたのは、知識だけでなく「どう話すか」「どう値段をつけるか」「どうSNSで発信するか」まで一緒に考えてもらえたこと。子育ての合間にできる範囲から始めて、今は月に数万円の売上になっています。<span class="em">「これ、私にもできるんだ」という感覚が生まれた</span>と話してくれました。</p>
+      </div>
+
+      <div class="case">
+        <div class="case-tag">薬膳の知識を活かして、自分のサロンを開いた方</div>
+        <div class="case-ba">
+          <div class="contrast">
+            <div class="contrast-row before">
+              <div class="contrast-label">Before</div>
+              <p class="flow">薬膳の知識はある。漢方茶も作れる。でも「誰に、何を、どう届けるか」がずっと見えなかった。メニューを作ろうとしても、自分の強みが何なのかよく分からず、他の誰かのやり方を真似するしかなかった。</p>
+            </div>
+            <div class="contrast-arrow">↓</div>
+            <div class="contrast-row after">
+              <div class="contrast-label">After</div>
+              <p class="flow">漢方占いの視点が加わってから、「なぜこれがこの人に必要なのか」を自分の言葉で話せるようになった。漢方茶・体質カウンセリング・薬膳お茶会が、バラバラではなくひとつの世界観としてつながった。ロゴとメニュー表のデザインも一緒に作り、今は自分の名前の看板を持てている。</p>
+            </div>
+          </div>
+        </div>
+        <p class="flow" style="margin-top:16px;">「何を学ぶかより、どう形にするかを教えてもらえた」という言葉が印象的でした。知識を増やす場所はたくさんある。でも、<span class="em">その知識を使って、自分だけのサービスとして届けるまでを一緒に考えてくれる場所は、ほとんどない</span>と言っていました。</p>
+      </div>
+
+      <div class="case">
+        <div class="case-tag">鍼灸・エステ・セラピーの施術者として活かした方</div>
+        <div class="case-ba">
+          <div class="contrast">
+            <div class="contrast-row before">
+              <div class="contrast-label">Before</div>
+              <p class="flow">施術の腕はある。でも「なんとなく体に良さそう」という印象で終わってしまい、施術の価値が伝わりにくかった。リピートはあっても、新規の方に選ばれ続けることが難しかった。</p>
+            </div>
+            <div class="contrast-arrow">↓</div>
+            <div class="contrast-row after">
+              <div class="contrast-label">After</div>
+              <p class="flow">「こういう体質で、こういう性質の方だから、今このアプローチが合います」と根拠を持って伝えられるようになった。施術後の会話が変わり、「なんとなく良かった」から「この人に診てもらうと、自分のことが分かる」という信頼に変わった。口コミで来てくれる方が増えた。</p>
+            </div>
+          </div>
+        </div>
+        <p class="flow" style="margin-top:16px;">技術と知識を持っている人が「伝える言葉」を手に入れると、こんなにも変わる、という例です。施術の価値は変わっていないのに、<span class="em">「なぜあなたに必要なのか」を言葉にできるだけで、お客さまとの関係がまったく違うものになる</span>と話してくれています。</p>
+      </div>
+
+      <div class="case">
+        <div class="case-tag">カウンセリング・人材育成・マネジメントに活かした方</div>
+        <p class="flow">「漢方や占いは、健康や美容の分野のもの」と思っていたけれど、人を深く理解するための方法として使ってみたら、まったく別の可能性が開けた、という声があります。相手がどんな言葉で動きやすいか、どんな状況でつぶれやすいか、どこに強みがあるか。<span class="em">体質と性質の両面から読み取れるようになると、対話の質がまるごと変わります</span>。カウンセリングでも、チームのマネジメントでも、人材育成でも。「人を見る目が変わった」という感想が多い分野です。</p>
+      </div>
+
+      <p class="flow" style="margin-top:8px;">形も、始め方も、使い方も、それぞれです。共通しているのは、「人を読み取る力」が加わったことで、<span class="em">自分だけの届け方が見えてきた</span>こと。そしてそれを、一人でゼロから考えるのではなく、一緒に形にする環境があったこと。</p>
+    </div>
+  </section>
+
+  <!-- ===================== 半年後 ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">半年後のあなた</h2>
+    <div class="section-body">
+      <p class="flow">生年月日と会話から、その人の体質や性質を読み取り、その人に合う言葉で伝えられるようになっています。「なんとなく」ではなく、根拠を持って。体質に合う漢方茶を選び、食材を提案し、養生の方向性を伝えられる。SNSでは「私のことみたい」「この人に相談してみたい」と思われる発信が増えていく。</p>
+      <p class="flow">今のお仕事がある方は、そこに新しい価値を足せる。これから始める方は、小さくても自分の看板を持てる。学びが、やっと仕事になる。そして、<span class="em">AIに仕事を奪われる側ではなく、AIを使いながら人にしかできない価値を届ける側になる。</span>それが、このプログラムで目指している未来です。</p>
+    </div>
+  </section>
+
+  <!-- ===================== 手に入るもの（価値の積み上げ・価格直前） ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">参加にあたって</h2>
+    <div class="section-body">
+      <div class="condition-box">
+        <div class="condition-box-title">このプログラムが向いている方</div>
+        <ul class="condition-list">
+          <li>漢方・薬膳・占い・カウンセリングのいずれかを、スクールや独学で学んだことがある</li>
+          <li>ブラウザの操作、文字入力、Zoomへの接続など、日常的なパソコン操作ができる</li>
+          <li>今ある知識を「人の役に立つ形」に変えることに、関心がある</li>
+        </ul>
+        <div class="condition-note">ツールやAIシステムは、講師が裏側をすべて構築済みです。難しい設定やプログラミングを学ぶ必要はありません。日常的なパソコン操作ができれば、初日からサクサクと鑑定結果を出せます。ITへの苦手意識がある方も、ご安心ください。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 手に入るもの本体 ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">このプログラムで<br>手に入るもの</h2>
+    <div class="section-body">
+      <p class="takeaway">知識ではなく、動かせる環境を。<br><span class="gold-text">必要なものは、最初からすべて揃っています。</span></p>
+
+      <div class="value-cards">
+
+        <div class="value-card">
+          <div class="value-card-num">01</div>
+          <div class="value-card-title">相手の心と体をよむ力</div>
+          <div class="value-card-body">生年月日から体質と性質を読み取り、「なぜこれがあなたに必要なのか」を根拠を持って伝えられるようになります。感覚に頼らず、自信を持って提案できる。これがすべての起点です。</div>
+          <div class="value-card-why">今まで「なんとなく」で伝えていたことが、言葉になる。お客さまの信頼と、リピートが変わります。</div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-num">02</div>
+          <div class="value-card-title">受講生専用の漢方占い鑑定ツール</div>
+          <div class="value-card-body">一般公開している「ご自愛漢方占い」よりも、さらに詳しく体質と心理を読み解ける受講生専用ツールを使います。鑑定結果をどう読み、どう仕事に活かすかも含めてお伝えします。</div>
+          <div class="value-card-why">自分で一から作る必要はありません。すでに完成したツールを、初日から仕事に使える状態でお渡しします。</div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-num">03</div>
+          <div class="value-card-title">AIを使いこなす仕組みと実践法</div>
+          <div class="value-card-body">発信文、鑑定レポート、カウンセリングの準備、メニュー表の文章——AIを活用してこれらを効率よく動かす方法を具体的に学びます。人を読む視点があるからこそ、AIの出力を正しく使いこなせます。</div>
+          <div class="value-card-why">AIを「使っている」から「使いこなしている」に変わると、仕事のスピードがまるごと変わります。</div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-num">04</div>
+          <div class="value-card-title">漢方茶・薬膳素材の仕入れルート</div>
+          <div class="value-card-body">自分で探すと時間がかかる、品質の安定した漢方茶・薬膳素材の仕入れ先を、そのまま使える形でご紹介します。サービスをスタートするまでの準備時間を、大幅に短縮できます。</div>
+          <div class="value-card-why">いい素材を選ぶことは、信頼につながります。ゼロから探す手間を省いて、本質的な部分に時間を使えます。</div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-num">05</div>
+          <div class="value-card-title">メニュー設計・価格設定</div>
+          <div class="value-card-body">何を、いくらで、どう見せるか。「これで本当にいいのか」と迷いがちな価格とメニューを、受講生それぞれの強みや状況に合わせて一緒に設計します。収益につながる組み立て方を、具体的にお伝えします。</div>
+          <div class="value-card-why">価格は自信の表れです。根拠を持って決めると、提案するときの言葉が変わります。</div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-num">06</div>
+          <div class="value-card-title">SNS・LINEの発信と導線づくり</div>
+          <div class="value-card-body">「私のことみたい」と読まれる発信の作り方から、LINE公式への導線、問い合わせにつなげるまでの流れを設計します。発信の量より、届く人に届く発信ができるようになることを目指します。</div>
+          <div class="value-card-why">発信が苦手な方も多いですが、「誰に、何を、なぜ」が明確になると、書くことが自然に見えてきます。</div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-num">07</div>
+          <div class="value-card-title">ロゴ・パッケージのデザインサポート</div>
+          <div class="value-card-body">サービスの世界観をつくるロゴ、パッケージ、メニュー表のデザインを、講師が一緒に考えます。他に誰もいない「あなただけのビジュアル」を作ることが、選ばれ続ける理由になります。</div>
+          <div class="value-card-why">デザインは見た目ではなく、「この人に頼みたい」という信頼の入口です。世界観が揃うと、発信全体が変わります。</div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-num">08</div>
+          <div class="value-card-title">半年間の実践プログラム ＋ 修了後1年間のフォロー</div>
+          <div class="value-card-body">学んで終わりではなく、動き出してからが本番です。半年間の実践に加え、修了後も1年間、迷ったときや壁にぶつかったときに相談できる環境を用意しています。一人にしないことが、続ける力になります。</div>
+          <div class="value-card-why">多くの講座は「学んだら終わり」。このプログラムは、形になって、動いて、育つところまでを一緒に見ます。</div>
+        </div>
+
+        <div class="value-card">
+          <div class="value-card-num">09</div>
+          <div class="value-card-title">KAMPO STAND 修了認定（独自認定）</div>
+          <div class="value-card-body">プログラムを修了した方には、KAMPO STANDの独自認定をお渡しします。公的資格とは異なりますが、「学んだことを形にした証」として、発信や自己紹介の場面で活用いただけます。</div>
+          <div class="value-card-why">肩書きより、何ができるかが大切。とはいえ、形として残るものがあると、自信の支えになります。</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 価格（高温CTA） ===================== -->
+  <section class="section reveal">
+    <h2 class="section-title">価格</h2>
+    <div class="section-body">
+      <div class="price-card">
+        <div class="price-name">漢方占いビジネスプログラム</div>
+        <div class="price-regular">通常価格 <s>400,000円（税込）</s></div>
+        <div class="price-arrow">↓</div>
+        <div class="price-limited">モニター ／ 先着2名限定</div>
+        <div class="price-main"><span class="num">298,000</span><span class="yen"> 円</span></div>
+        <div class="price-tax">税込／モニター限定価格</div>
+        <div class="price-includes">半年間のプログラム ＋ 修了後1年間のフォロー</div>
+        <div class="price-pay">
+          お支払いは銀行振込（一括）。<br>クレジットカードなど他の決済方法をご希望の方は、ご相談ください。詳しくはLINEで。
+        </div>
+      </div>
+      <div class="section-body">
+        <div class="limit-box" style="margin-bottom:26px;">
+          <div class="limit-box-title">モニター募集・2名限定の理由</div>
+          <p class="flow"><strong style="color:var(--gold-d);font-family:'Zen Kaku Gothic New',sans-serif;">なぜモニター募集なのか</strong><br>
+          このプログラムはまだ初回です。「受講して実際にどう変わったか」「どこが使いやすくて、どこが分かりにくかったか」。リアルなフィードバックをいただきながら、プログラムをより良くしていきたいと考えています。そのため、初回はモニター価格でお届けします。通常価格より大幅に抑えた代わりに、率直な感想や改善点を教えていただける方を募集します。</p>
+          <p class="flow"><strong style="color:var(--gold-d);font-family:'Zen Kaku Gothic New',sans-serif;">なぜ2名限定なのか</strong><br>
+          現在、既存の漢方占い講座で45名の方が学んでいます。その方々への対応と並行してお届けするため、一度に多くの方をお迎えすることができません。また、このプログラムは個別対応が前提です。鑑定ツールのカスタマイズ、メニュー設計、発信の方向性、世界観づくりのデザインサポートまで、講師が一人ひとりの強みや背景に合わせて個別に伴走します。丁寧にやろうとすると、物理的に2名が限界なのです。</p>
+          <p class="flow">もしこのご案内を読んでいる今、枠がすでに埋まっていた場合も、LINEにキーワードを送っていただき、アンケートにご回答いただいた方には、次回募集の優先案内とキャンセル待ちの権利をお渡しします。</p>
+        </div>
+        <a class="btn" href="https://lin.ee/ux3HSzn" target="_blank" rel="noopener"><span class="btn-text">LINEで「ビジネスプログラム」と送る</span></a>
+        <p class="btn-note">モニター先着2名限定</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== クロージング（高温CTA） ===================== -->
+  <section class="section reveal">
+    <div class="section-body" style="margin-top:0;">
+      <p class="flow">ここまで読んでくださり、ありがとうございます。もしかすると、あなたはもう十分すぎるほど学んできた人かもしれません。漢方を、薬膳を、占いを学んだ。本も読んだし、講座にも通った。誰かの役に立ちたいと、ずっと思ってきた。でも、その知識をどう形にしたらいいのか、分からなかった。</p>
+      <p class="flow">あなたはもう十分、学んできた。足りないのは知識ではなく、人に届く形に変えること。その読み取りの型も、動かすためのツールも、伴走も、私の手元に全部あります。</p>
+      <p class="flow">いきなり申し込む必要はありません。お互いに確かめながら進めていけたらと思っています。まずは、下のステップで動いてみてください。</p>
+
+      <div class="line-steps" style="margin:32px auto;">
+        <div class="line-step">
+          <div class="line-step-badge">1</div>
+          <div class="line-step-body">
+            <div class="line-step-label">STEP 1</div>
+            <div class="line-step-text">LINEトーク画面で <strong>「ビジネスプログラム」</strong> と送信</div>
+          </div>
+        </div>
+        <div class="line-step">
+          <div class="line-step-badge">2</div>
+          <div class="line-step-body">
+            <div class="line-step-label">STEP 2</div>
+            <div class="line-step-text">届いた <strong>アンケートフォーム</strong> に回答（所要3分程度）</div>
+          </div>
+        </div>
+        <div class="line-step">
+          <div class="line-step-badge">3</div>
+          <div class="line-step-body">
+            <div class="line-step-label">STEP 3</div>
+            <div class="line-step-text">受講生45名が「これだけで顧客の本質が立体的に視覚化できる」と驚いた <strong>漢方占い特別資料</strong> が自動で届く</div>
+          </div>
+        </div>
+        <div class="line-registered">すでにLINE登録済みの方も、トーク画面で「ビジネスプログラム」と送っていただければ、そのままご案内が届きます。</div>
+      </div>
+
+      <p class="takeaway" style="margin-top:34px;">あなたが学んできたことは、<br>無駄ではありません。<br><span class="gold-text"><span class="em">まだ形になっていないだけ、かもしれません。</span></span></p>
+      <p class="flow" style="text-align:center;">その学びが、いつか誰かの安心や、気づきや、整えるきっかけになる。そんな未来を、一緒に作っていけたら嬉しいです。</p>
+      <a class="btn" href="https://lin.ee/ux3HSzn" target="_blank" rel="noopener" style="margin-top:8px;"><span class="btn-text">特別資料を受け取る（無料）</span></a>
+      <p class="btn-note">モニター先着2名限定</p>
+    </div>
+  </section>
+
+  <!-- ===================== フッター ===================== -->
+  <footer class="footer">
+    <div class="footer-brand">KAMPO STAND</div>
+    <div class="footer-copy">© 2026 KAMPO STAND. All rights reserved.</div>
+    <p class="disclaimer">本プログラムは漢方・中医学・算命学の考え方をもとにした体質や性質の読み解きをお伝えするものであり、医療行為や医師による診断・治療に代わるものではありません。体調に不安がある場合は専門医にご相談ください。</p>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  var els = document.querySelectorAll('.reveal');
+  if (!('IntersectionObserver' in window)) {
+    els.forEach(function (el) { el.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(function (el) { io.observe(el); });
+})();
+</script>
+</body>
+</html>
